@@ -1,5 +1,8 @@
 export function PostsList() {
     return (
-        <h1>Lista post</h1>
+        <h1
+            className="text-center p-3">
+            <strong>Lista post</strong>
+        </h1>
     )
 };
