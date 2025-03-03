@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function Footer() {
     return (
@@ -16,13 +16,13 @@ export function Footer() {
 
                     <NavLink
                         className="nav-link"
-                        to="/aboutus">
+                        to="/about-us">
                         About us
                     </NavLink>
 
                     <NavLink
                         className="nav-link"
-                        to="/postslist">
+                        to="/posts-list">
                         Posts
                     </NavLink>
                 </div>

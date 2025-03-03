@@ -15,8 +15,8 @@ function App() {
       <Routes>
         <Route Component={DefaultLayout}>
           <Route Component={HomePage} path="/" />
-          <Route Component={AboutUs} path="/aboutus" />
-          <Route Component={PostsList} path="/postslist" />
+          <Route Component={AboutUs} path="/about-us" />
+          <Route Component={PostsList} path="/posts-list" />
         </Route>
       </Routes>
     </BrowserRouter>
