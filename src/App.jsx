@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { HomePage } from "./pages/HomePage";
 import { AboutUs } from "./pages/AboutUs";
 import { PostsList } from "./pages/PostsList";
+import { SinglePost } from "./pages/SinglePost";
 
 // importo i layout
 import { DefaultLayout } from "./layouts/DefaultLayout";
@@ -17,6 +18,7 @@ function App() {
           <Route Component={HomePage} path="/" />
           <Route Component={AboutUs} path="/about-us" />
           <Route Component={PostsList} path="/posts-list" />
+          <Route Component={SinglePost} path="/posts-list/:id" />
         </Route>
       </Routes>
     </BrowserRouter>

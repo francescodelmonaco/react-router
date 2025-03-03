@@ -13,35 +13,35 @@ export function PostsList() {
     return (
         <>
             <h1
-                className="text-center p-3">
+                className="text-center my-4">
                 <strong>Lista post</strong>
             </h1>
 
             {/* cards */}
-            {
-                posts.map((post) => {
-                    const { id, title, content, image } = post;
+            < div className="row row-cols-2 mb-4 mx-4" >
+                {
+                    posts.map((post) => {
+                        const { id, title, content, image } = post;
 
-                    return (
-                        < div key={id} className="row row-cols-1 g-4 m-3" >
-                            <div className="col">
+                        return (
+                            <div key={id} className="col">
                                 <div className="card">
                                     <img src={image} className="card-img-top" alt={title} />
 
                                     <div className="card-body">
-                                        <h5 className="card-title">{title}</h5>
+                                        <h5 className="card-title"><strong>{title}</strong></h5>
                                         <p className="card-text">{content}</p>
                                     </div>
 
-                                    <div className="d-grid gap-2 col-3 mx-auto my-3">
+                                    <div className="d-grid gap-2 col-3 mx-auto mb-4">
                                         <button className="btn btn-secondary" type="button">Scopri di più...</button>
                                     </div>
                                 </div>
                             </div>
-                        </div >
-                    )
-                })
-            }
+                        )
+                    })
+                }
+            </div >
         </>
     )
 };
