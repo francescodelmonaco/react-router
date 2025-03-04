@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, NavLink } from "react-router-dom";
 
 export function SinglePost() {
     const url = import.meta.env.VITE_BASE_API_URL;
@@ -17,18 +17,25 @@ export function SinglePost() {
 
     return (
         <>
-            <div className="d-flex justify-content-between">
+            <div className="d-flex flex-row justify-content-between mt-4 mb-3 mx-5 gap-3">
                 <button
                     type="button"
-                    className="btn btn-outline-secondary mt-4 mx-5 mb-3"
-                    onClick={() => navigate(`/posts-list/${parseInt(id) - 1}`)}>
+                    className="btn btn-outline-secondary col"
+                    onClick={() => navigate(`/posts-list/${index + 1}`)}>
                     <i className="fa-solid fa-arrow-left"></i>
                 </button>
 
                 <button
                     type="button"
-                    className="btn btn-outline-secondary mt-4 mx-5 mb-3"
-                    onClick={() => navigate(`/posts-list/${parseInt(id) + 1}`)}>
+                    className="btn btn-outline-secondary col"
+                    onClick={() => navigate(-1)}>
+                    <i class="fa-solid fa-list-ul"></i>
+                </button>
+
+                <button
+                    type="button"
+                    className="btn btn-outline-secondary col"
+                    onClick={() => navigate(`/posts-list/${index + 1}`)}>
                     <i className="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
